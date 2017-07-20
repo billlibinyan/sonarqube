@@ -223,6 +223,13 @@ export default class OrganizationNavigation extends React.PureComponent {
                   {translate('coding_rules.page')}
                 </Link>
               </li>
+              <li>
+                <Link
+                  to={`/organizations/${organization.key}/quality_gates`}
+                  activeClassName="active">
+                  {translate('quality_gates.page')}
+                </Link>
+              </li>
               {this.renderExtensions(moreActive)}
               {organization.canAdmin && this.renderAdministration(adminActive)}
             </ul>

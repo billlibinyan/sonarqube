@@ -105,9 +105,10 @@ export function getQualityProfileUrl(name, language, organization) {
  * @param {string} key
  * @returns {Object}
  */
-export function getQualityGateUrl(key) {
+export function getQualityGateUrl(key: string, organization?: string) {
+  const urlPrefix = organization ? '/organizations/' + encodeURIComponent(organization) : '';
   return {
-    pathname: '/quality_gates/show/' + encodeURIComponent(key)
+    pathname: urlPrefix + '/quality_gates/show/' + encodeURIComponent(key)
   };
 }
 

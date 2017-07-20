@@ -158,7 +158,7 @@ export default class GlobalNavMenu extends React.PureComponent {
         {this.renderIssuesLink()}
         {!organizationsEnabled && this.renderRulesLink()}
         {!organizationsEnabled && this.renderProfilesLink()}
-        {this.renderQualityGatesLink()}
+        {!organizationsEnabled && this.renderQualityGatesLink()}
         {this.renderAdministrationLink()}
         {this.renderMore()}
       </ul>

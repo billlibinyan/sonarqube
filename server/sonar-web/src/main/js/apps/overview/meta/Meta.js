@@ -56,7 +56,11 @@ const Meta = ({ component, history, measures, areThereCustomOrganizations, route
 
       {isProject && <MetaTags component={component} />}
 
-      {shouldShowQualityGate && <MetaQualityGate gate={qualityGate} />}
+      {shouldShowQualityGate &&
+        <MetaQualityGate
+          gate={qualityGate}
+          organization={shouldShowOrganizationKey && component.organization}
+        />}
 
       {shouldShowQualityProfiles &&
         <MetaQualityProfiles
